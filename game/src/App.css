@@ -1,0 +1,162 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Mono', monospace;
+  font-size: 16px;
+  background: rgba(33, 46, 59, 1);
+  color: rgba(250,250,255,1);
+}
+
+pre {
+  text-align: center;
+  color: rgba(74, 147, 170, 1);
+}
+
+.content {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.app__input, .app__end {
+  text-align: center;
+}
+
+.app__end {
+  margin-top: 40px;
+}
+
+input {
+  outline: none;
+  border: none;
+  margin: 0 0 20px 3px;
+  padding: 8px 5px 0px 0;
+  background: transparent;
+  color: rgba(250,250,255,1);
+  font-size: 20px;
+  border-bottom: 1px dotted rgba(91,114,127,1);
+}
+
+button {
+  background: transparent;
+  border: 1px dashed rgba(250,250,255,1);
+  outline: none;
+  cursor: pointer;
+  color: rgba(250,250,255,1);
+  padding: 8px 30px 9px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.app__gen-number {
+  text-align: center;
+}
+
+.app__divider {
+  color: rgba(91,114,127,1);
+  margin: 20px 0;
+}
+
+.app__number {
+  font-size: 36px;
+  color: rgba(244, 89, 87, 1);
+}
+
+.app__info:before,
+.app__info:after {
+  content: ' ';
+  display: table;
+}
+
+.app__info:after {
+  clear: both;
+}
+
+.app__info {
+  margin: 20px 0;
+}
+
+.app__level {
+  float: left;
+  color: rgba(244, 192, 37, 1);
+}
+
+.app__wrong {
+  float: right;
+  color: rgba(244, 89, 87, 1);
+}
+
+.app__author {
+  font-family: Helvetica, Arial;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  color: rgba(33, 150, 243, 1);
+  text-decoration: none;
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+}
+
+body{
+  background: #030321;
+  font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: #4D163D;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #BD0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #BD0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #FDB731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
