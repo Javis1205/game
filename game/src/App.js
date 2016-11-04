@@ -2,6 +2,29 @@ import React, { Component } from 'react';
 import './App.css';
 var ReactDOM=require('react-dom');
 //new code
+// class InputStatus extends React.Component{
+//   var x = [0, 0, 960, 300].join(' ');
+//   render() {
+//     return(
+//       <div className="container app__status">
+//         <div className="row">
+//           <svg viewBox={viewBox}>
+//             <symbol id={s-text}>
+//               <text textAnchor="middle" x="50%" y="80%" id={status}>Wellcome</text>
+//             </symbol>
+
+//             <g className="g-ants">
+//               <use xlink:href={#s-text} className="text-copy"></use>
+//               <use xlink:href={#s-text} className="text-copy"></use>
+//               <use xlink:href={#s-text} className="text-copy"></use>
+//               <use xlink:href={#s-text} className="text-copy"></use>
+//               <use xlink:href={#s-text} className="text-copy"></use>
+//             </g>
+//           </svg>
+//       </div>
+//     )
+//   }
+// }
 class GenNumber extends React.Component {
   componentDidUpdate() {
     let time, digit;
@@ -25,12 +48,12 @@ class GenNumber extends React.Component {
     return(
       <div className="app__gen-number">
         <div className="app__info">
-          <p className="app__level">Level: {this.props.level.main} - {this.props.level.sub}</p>
-          <p className="app__wrong">Wrong: {this.props.wrong}/3</p>
+          <p className="app__level">Cấp độ: {this.props.level.main} - {this.props.level.sub}</p>
+          <p className="app__wrong">Số lần sai: {this.props.wrong}/3</p>
         </div>
-        <p className="app__divider">############################</p>
-        <p className="app__number" id="number">{(this.props.wrong < 3) ? atob(this.props.question) : '????'}</p>
-        <p className="app__divider">############################</p>
+        <div className="app__divider"><p className="app__number" id="number">{(this.props.wrong < 3) ? atob(this.props.question) : '????'}</p></div>
+        
+        
       </div>
     )
   }
@@ -55,9 +78,9 @@ class InputNumber extends React.Component {
     let layout;
     if(this.props.wrong < 3) {
       layout=<div className="app__input">
-            <form onSubmit={this.handleUserInput}>
-              Number is: 
-              <input 
+            <form className="number_input" onSubmit={this.handleUserInput}>
+              <div className="title">số bạn vừa nhìn thấy là số nào ? :</div>
+              <input className = "numbers" 
                 pattern="[0-9]+"
                 type="text"
                 ref={ (ref) => this.userNumber=ref } 
@@ -66,11 +89,11 @@ class InputNumber extends React.Component {
               <br/>
               <br/>
             </form>
-            <button onClick={this.handleReset}>Restart</button>
+            <button className="restart" onClick={this.handleReset}>Thử lại nào!</button>
           </div>
     } else {
       layout=<div className="app__end">
-            <div class="app__notify">Better luck next time (✧ω✧)</div><br/><br/><button onClick={this.handleReset}>Restart</button>
+            <div class="app__notify">Thua bố nó rồi còn đâu!!!</div><br/><br/><button className="restart" onClick={this.handleReset}>Thử lại nào !</button>
           </div>;
     }
     
@@ -78,6 +101,7 @@ class InputNumber extends React.Component {
   }
 }
 class InputStatus extends React.Component{
+  //in thuoc tinh
   
 }
 class App extends React.Component {

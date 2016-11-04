@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Fira Mono', monospace;
-  font-size: 16px;
+  font-size: 18px;
   background: rgba(33, 46, 59, 1);
   color: rgba(250,250,255,1);
 }
@@ -83,7 +83,7 @@ button {
 
 .app__level {
   float: left;
-  color: rgba(244, 192, 37, 1);
+  color: #FDB731;
 }
 
 .app__wrong {
@@ -103,12 +103,12 @@ button {
 
 html, body{
   height: 100%;
-  font-weight: 800;
+  font-weight: 100;
 }
 
 body{
   background: #030321;
-  font-family: Arial;
+  font-family: 'Roboto';
 }
 
 svg {
@@ -159,4 +159,23 @@ svg {
 .container{
   width: 1000px;
   margin: 0 auto;
+}
+.app__divider{
+  border-radius: 15px;
+  width: 250px;
+  margin: 0 auto;
+  border: 2px solid rgba(244, 89, 87, 1);
+  margin-bottom: 20px;
+}
+.restart{
+  border: 1px solid rgba(244, 89, 87, 1);
+  border-radius: 4px;
+  background-color: rgba(244, 89, 87, 1);
+}
+.numbers{
+  margin-top: 20px;
+  width: 160px;
+}
+.number_input{
+      height: 100px;
 }
